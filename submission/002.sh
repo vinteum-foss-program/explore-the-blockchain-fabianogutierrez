@@ -12,5 +12,5 @@ message="1E9YwDtYf9R29ekNAfbV7MvB4LNv7v3fGa"
 resultado=$($BTC_HOME/bitcoin-cli verifymessage $address $signature $message)
 echo $resultado
 
-echo $BTC_HOME/bitcoin-cli verifymessage $address $signature $message
+#echo $BTC_HOME/bitcoin-cli verifymessage $address $signature $message
 
