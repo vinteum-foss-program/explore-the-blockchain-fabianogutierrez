@@ -33,7 +33,7 @@ bloco=$($BTC_CMD getblock $hash 2)
 #echo $bloco
 for txid in $txidB256128; do
     #echo $txid
-    tx257343=$(echo $bloco | $JQ_CMD '.tx[] |.vout[] | select(.vin[] | .txid == '$txid')')
+    tx257343=$(echo $bloco | $JQ_CMD '.tx[] | select(.vin[] | .txid == '$txid')')
     resultado=$(echo $tx257343 | $JQ_CMD '.txid ')
     if [[ -n "$resultado" ]]; then
         resultado="${resultado//\"/$''}"
